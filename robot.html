@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<head>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<script src="jquery-3.2.1.min.js"></script>
+<style>
+
+@keyframes robotdancing{
+  0% { 
+		transform: rotate(0deg);
+	}
+	25% { 
+		transform: rotate(10deg);
+		transform-origin: bottom; 
+	}
+	75% { 
+		transform: rotate(-10deg);
+		transform-origin: bottom left; 
+	}
+	100% { 
+		transform: rotate(0deg);
+	}
+  }
+@-webkit-keyframes robotdancing{
+  0% { 
+		-webkit-transform: rotate(0deg);
+	}
+	25% { 
+		-webkit-transform: rotate(10deg);
+		-webkit-transform-origin: bottom; 
+	}
+	75% { 
+		-webkit-transform: rotate(-10deg);
+		-webkit-transform-origin: bottom left; 
+	}
+	100% { 
+		-webkit-transform: rotate(0deg);
+	}
+  }
+@-moz-keyframes robotdancing{
+  0% { 
+		-moz-transform: rotate(0deg);
+	}
+	25% { 
+		-moz-transform: rotate(10deg);
+		-moz-transform-origin: bottom; 
+	}
+	75% { 
+		-moz-transform: rotate(-10deg);
+		-moz-transform-origin: bottom left; 
+	}
+	100% { 
+		-moz-transform: rotate(0deg);
+	}
+  }
+.robotdance{
+  animation: robotdancing 5s infinite; 
+  animation-timing-function: ease-in-out;
+  -webkit-animation: robotdancing 5s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation: robotdancing 5s infinite;
+  -moz-animation-timing-function: ease-in-out;
+  }
+@keyframes robotmove{
+  0% { 
+		left: 200px; 
+	}
+	50% { 
+		left: 500px; 
+	}
+	100% { 
+	  left: 200px; 
+	}
+}
+@-webkit-keyframes robotmove{
+  0% { 
+		left: 200px; 
+	}
+	50% { 
+		left: 500px; 
+	}
+	100% { 
+	  left: 200px; 
+	}
+}
+@-moz-keyframes robotmove{
+  0% { 
+		left: 200px; 
+	}
+	50% { 
+		left: 500px; 
+	}
+	100% { 
+	  left: 200px; 
+	}
+}
+.robotmovement{
+  animation: robotmove 10s infinite;
+  -webkit-animation: robotmove 10s infinite;
+  -moz-animation: robotmove 10s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  }
+.robotwrapper{
+  position: relative;  
+}
+.robot {
+  position: relative;
+  left: 200px;
+}
+@keyframes rainbow{
+  0%{
+    border-top: 10px solid #ff2400; 
+    border-bottom: 80px solid #ff2400; 
+  }
+  10%{
+    border-top: 10px solid #e81d1d; 
+    border-bottom: 80px solid #e81d1d; 
+  }
+  20%{
+     border-top: 10px solid #e8b71d; 
+    border-bottom: 80px solid #e8b71d; 
+  }
+   30%{
+     border-top: 10px solid #1de840; 
+    border-bottom: 80px solid #1de840; 
+  }
+  40%{
+     border-top: 10px solid #1ddde8; 
+    border-bottom: 80px solid #1ddde8; 
+  }
+  60%{
+     border-top: 10px solid #2b1de8; 
+    border-bottom: 80px solid #2b1de8; 
+  }
+  80%{
+     border-top: 10px solid #dd00f3; 
+    border-bottom: 80px solid #dd00f3; 
+  }
+  100%{
+     border-top: 10px solid #dd00f3; 
+    border-bottom: 80px solid #dd00f3; 
+  }
+}
+@-moz-keyframes rainbow{
+  0%{
+    border-top: 10px solid #ff2400; 
+    border-bottom: 80px solid #ff2400; 
+  }
+  10%{
+    border-top: 10px solid #e81d1d; 
+    border-bottom: 80px solid #e81d1d; 
+  }
+  20%{
+     border-top: 10px solid #e8b71d; 
+    border-bottom: 80px solid #e8b71d; 
+  }
+   30%{
+     border-top: 10px solid #1de840; 
+    border-bottom: 80px solid #1de840; 
+  }
+  40%{
+     border-top: 10px solid #1ddde8; 
+    border-bottom: 80px solid #1ddde8; 
+  }
+  60%{
+     border-top: 10px solid #2b1de8; 
+    border-bottom: 80px solid #2b1de8; 
+  }
+  80%{
+     border-top: 10px solid #dd00f3; 
+    border-bottom: 80px solid #dd00f3; 
+  }
+  100%{
+     border-top: 10px solid #dd00f3; 
+    border-bottom: 80px solid #dd00f3; 
+  }
+}
+@-webkit-keyframes rainbow{
+  0%{
+    border-top: 10px solid #ff2400; 
+    border-bottom: 80px solid #ff2400; 
+  }
+  10%{
+    border-top: 10px solid #e81d1d; 
+    border-bottom: 80px solid #e81d1d; 
+  }
+  20%{
+     border-top: 10px solid #e8b71d; 
+    border-bottom: 80px solid #e8b71d; 
+  }
+   30%{
+     border-top: 10px solid #1de840; 
+    border-bottom: 80px solid #1de840; 
+  }
+  40%{
+     border-top: 10px solid #1ddde8; 
+    border-bottom: 80px solid #1ddde8; 
+  }
+  60%{
+     border-top: 10px solid #2b1de8; 
+    border-bottom: 80px solid #2b1de8; 
+  }
+  80%{
+     border-top: 10px solid #dd00f3; 
+    border-bottom: 80px solid #dd00f3; 
+  }
+  100%{
+     border-top: 10px solid #dd00f3; 
+    border-bottom: 80px solid #dd00f3; 
+  }
+}
+
+.rainbowbeep{
+  animation: rainbow 6s infinite; 
+  -webkit-animation: rainbow 6s infinite; 
+  -moz-animation: rainbow 6s infinite; 
+  }
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 80px solid #888;
+  position: relative;
+  left: 140px;
+}
+@keyframes blink{
+  50% {
+    background: radial-gradient(circle,red 15%, transparent 40%),#cc5;
+    background-size: 75px 150px;
+  }
+}
+@-webkit-keyframes blink{
+  50% {
+    background: -webkit-radial-gradient(circle,red 15%, transparent 40%),#cc5;
+    background-size: 75px 150px;
+  }
+}
+@-moz-keyframes blink{
+  50% {
+    background: -moz-radial-gradient(circle,red 15%, transparent 40%),#cc5;
+    background-size: 75px 150px;
+  }
+}
+.laser {
+  animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+}
+.brain {
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5; 
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background-size: 75px 150px;
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 10px 10px;
+  border-bottom: 40px solid #666;
+  position: relative;
+  left: 70px;
+}
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #bc6;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
+#hiddentext{
+  color: white; 
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  text-align: center; 
+   display: none; 
+  }
+.speakerbox{
+  position: relative; 
+  height: 70px;
+  width: 150px;
+  background: black;
+  top: -840px;
+  z-index: 1;
+  border: 1px solid #666; 
+  }
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  position: relative;
+  top: -320px;
+  left: -190px;
+  z-index: -1;
+}
+@-webkit-keyframes robotarmright{
+  0% { 
+		-webkit-transform: scaleY(-1) rotate(20deg) translate(0px);
+		top: -620px;
+	}
+	50% { 
+		-webkit-transform: ScaleX(1) rotate(40deg) translate(-20px);
+		top: -750px;
+		left: 250px; 
+	}
+	100% { 
+		-webkit-transform:scaleY(-1) rotate(20deg) translate(0px);
+	  top: -620px;
+	}
+
+}
+@keyframes robotarmright{
+  0% { 
+		transform: scaleY(-1) rotate(20deg) translate(0px);
+		top: -620px;
+	}
+	50% { 
+		transform: ScaleX(1) rotate(40deg) translate(-20px);
+		top: -750px;
+		left: 250px; 
+	}
+	100% { 
+		transform:scaleY(-1) rotate(20deg) translate(0px);
+	  top: -620px;
+	}
+
+}
+@-moz-keyframes robotarmright{
+  0% { 
+		-moz-transform: scaleY(-1) rotate(20deg) translate(0px);
+		top: -620px;
+	}
+	50% { 
+		-moz-transform: ScaleX(1) rotate(40deg) translate(-20px);
+		top: -750px;
+		left: 250px; 
+	}
+	100% { 
+		-moz-transform:scaleY(-1) rotate(20deg) translate(0px);
+	  top: -620px;
+	}
+}
+.rightmove{
+  animation: robotarmright 10s infinite;
+  -webkit-animation: robotarmright 10s infinite;
+  -moz-animation: robotarmright 10s infinite;  
+}
+.right {
+ font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  top: -620px;
+  left: 190px;
+  z-index: -1;
+}
+.foot {
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position: relative;
+  left: 110px;
+  top: -10px;
+  z-index: -1;
+}
+
+/*Mini robot */
+.mini-robot-wrapper{
+  position: relative; 
+  left: 600px; 
+  bottom: 400px; 
+  display: none; 
+}
+@keyframes mini-robotmove{
+  0% { 
+		left: 0px; 
+	}
+	50% { 
+		left: 300px; 
+	}
+	100% { 
+	  left: 0px; 
+	}
+}
+@-webkit-keyframes mini-robotmove{
+  0% { 
+		left: 0px; 
+	}
+	50% { 
+		left: 300px; 
+	}
+	100% { 
+	  left: 0px; 
+	}
+}
+@-moz-keyframes mini-robotmove{
+  0% { 
+		left: 0px; 
+	}
+	50% { 
+		left: 300px; 
+	}
+	100% { 
+	  left: 0px; 
+	}
+}
+.mini-robotmovement{
+  animation: mini-robotmove 10s infinite;
+  -webkit-animation: mini-robotmove 10s infinite;
+  -moz-animation: mini-robotmove 10s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  }
+.mini-robot{
+  position: relative; 
+}
+.mini-beep{
+  width: 3px;
+  height: 0;
+  border: 5px solid transparent; 
+  border-top: 10px solid #F86843;
+  border-bottom: 80px solid #FF9056;
+  position: relative; 
+  left: 95px;
+  top: 10px; 
+}
+@keyframes mini-blink{
+  50% {
+    background: radial-gradient(circle,red 15%, transparent 40%), #F09895;
+    background-size: 35px 55px;
+  }
+}
+@-webkit-keyframes mini-blink{
+  50% {
+    background: -webkit-radial-gradient(circle,red 15%, transparent 40%),#F09895;
+    background-size: 35px 59px;
+  }
+}
+@-moz-keyframes mini-blink{
+  50% {
+    background: -moz-radial-gradient(circle,red 35%, transparent 40%), #F09895;
+    background-size: 35px 59px;
+  }
+}
+.mini-laser {
+  animation: mini-blink .5s infinite;
+  -webkit-animation: mini-blink .5s infinite;
+  -moz-animation: mini-blink .5s infinite;
+}
+.mini-brain{
+  position: relative; 
+  background: radial-gradient(circle, white 5%, transparent 30%), #FFA29E5;
+  background: -moz-radial-gradient(circle, white 5%, transparent 30%), #FFA29E;
+  background: -webkit-radial-gradient(circle, white 10%, transparent 30%), #FFA29E;
+  background-size: 35px 55px;
+  width: 70px;
+  height: 50px;
+  border-radius:10px;
+  z-index: 1; 
+  border-top: 10px double #EF4A2F; 
+  border-bottom: 20px solid #Ef4A2F;
+  left: 65px;
+  top: 5px;
+  
+}
+.mini-torso{
+  position:relative; 
+  width: 100px;
+  height: 150px;
+  background: #FFA29E; 
+  -webkit-border-radius: 63px 63px 63px 63px;
+   border-radius: 50%  50%  50%  50%;
+  left: 50px; 
+  }
+.mini-left{
+ font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  color: #EF4A2F;
+  transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  position: relative;
+  top: 0px;
+  left: -99px;
+  z-index: -1;
+}
+.mini-right{ 
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  color: #EF4A2F;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  top: -120px;
+  left: 100px;
+  z-index: -1;
+}  
+.mini-speakerbox{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 #FF9056;
+  position: relative;
+  top: -220px; 
+}
+.mini-foot{
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border-radius: 40px;
+  border: 18px solid #EF4A2F;
+  position: relative;
+  left: 70px;
+  top: -10px; 
+  z-index: -1; 
+}
+
+#talkbubble {
+   width: 120px;
+   height: 50px;
+   background: black;
+   position: relative;
+   border-radius: 10px;
+   left: 190px;
+   bottom: 250px;
+   font-family: 'Roboto Mono', monospace;
+   color: white; 
+   text-align: center;
+   padding: 20px 0;
+   display: none;
+  
+}
+#talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid black;
+   border-bottom: 13px solid transparent;
+}
+
+#buttons{
+  width: 1000px;
+  position: fixed; 
+  top: 750px; 
+  }
+button{
+  padding: 15px; 
+  margin: 10px; 
+  width: 150px; 
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  border-radius: 8px; 
+}
+button:hover{
+  background-color: #e7e7e7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="robotwrapper">
+<div class="robot">
+  <div class="beep"></div>
+  <div class="brain"></div>
+  <div class="torso">
+    <div class="left">j</div>
+    <div class="right">j</div>
+    <div class="speakerbox"><div id="hiddentext">Greetings Human!</div></div>
+  </div>
+  <div class="foot"></div>
+</div>
+</div>
+
+<div class="mini-robot-wrapper">
+<div class="mini-robot">
+  <div class="mini-beep"></div>
+  <div class="mini-brain"></div>
+  <div class="mini-torso">
+    <div class="mini-left">j</div>
+    <div class="mini-right">j</div>
+    <div class="mini-speakerbox"></div>
+  </div>
+  <div class="mini-foot"></div>
+<div id="talkbubble"> Hi friend! </div>
+</div>
+
+</div>
+
+
+<div id="buttons">
+<button class="flash">Laser Eyes</button>
+<button class="color">Change BG Color</button>
+<button class="moves">Dance</button>
+<button class="moverobot">Move</button>
+<button class="wave">Wave</button>
+<button class="hello">Speak</button>
+<button class="friend">Where's my friend?</button>
+<button class="disco">Disco!</button>
+</div>
+
+<!--<img src="/assets/dance_cotter.gif">-->
+<script>
+// When eyes button is clicked, toggle laser class on brain
+$(".flash").click(function() { //main robot eyes
+  $(".brain").toggleClass('laser');
+});
+$(".flash").click(function() {  //mini robot eyes
+  $(".mini-brain").toggleClass('mini-laser');
+});
+
+// Bg color randomizer 
+$(".color").click(function() {
+
+  // assign each named color a random number 0-255
+    var red = Math.floor(Math.random() * 255);
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+    
+  //generates RGBA value
+    var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
+  //change the body's background to the random color 
+    $("body").css("background", randomRGBA);   
+});
+
+//makes robot dance
+$(".moves").click(function(){
+  $(".robotwrapper, .mini-robot-wrapper").toggleClass('robotdance');
+}); 
+
+//makes robot move right
+$(".moverobot").click(function() {
+  $(".robot, .mini-robot").toggleClass('robotmovement');
+});
+$(".moverobot").click(function() {
+  $(".mini-robot").toggleClass('mini-robotmovement');
+});
+
+//makes robot arm move
+$(".wave").click(function() {
+  $(".right").toggleClass('rightmove');
+});
+//display text on body
+    $(".hello").click(function(){
+        $("#hiddentext").toggle();
+    });
+     $(".hello").click(function(){
+        $("#talkbubble").toggle();
+    });
+//display mini-robot
+   $(".friend").click(function(){
+        $(".mini-robot-wrapper").toggle();
+    });
+
+//makes antena change colors 
+$(".disco").click(function() {
+  $(".beep, .mini-beep").toggleClass('rainbowbeep');
+  });
+</script>
+</body>

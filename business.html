@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<script src="jquery-3.2.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/*header*/
+
+header{
+  overflow: hidden; 
+  background: #fff;
+  width:100%;
+  text-align:center;
+  border-bottom: 20px solid #91AA9E;
+}
+.main-social-media{
+  margin: 20px; 
+  width: 100%; 
+  height: 50px;
+}
+.main-social-media li{
+  padding: 0 40px;
+  display: inline-block; 
+  float: right; 
+}
+.headersm{
+  margin: 20px 20px 0 0; 
+  text-decoration: none; 
+   color: black; 
+  font-size: 30px;
+}
+.fa-facebook:hover{
+  color: #3b5998; 
+}
+.fa-twitter:hover{
+  color:#00aced;
+}
+.fa-instagram:hover{
+  background-image: -webkit-radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  background-image: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#logo{
+  display: inline-block; 
+  margin: 0 auto; 
+ 
+}
+#name{
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  margin: 20px 0 20px 0;
+  font-size: 70px;
+  text-align: center; 
+}
+/*navigation*/
+.main-nav{
+  background: #D1DBBD;  
+  }
+.main-nav ul {
+  padding: 20px 0; 
+  margin: 0 auto; 
+  text-align: center; 
+    
+}
+.main-nav li {
+  display: inline;
+  font-size: 25px;
+  padding: 0 20px; 
+      
+      
+  }
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+      
+  }
+.main-nav a:hover{
+  color: #000;  
+  }
+.mobile-nav{
+  display: none; 
+}
+.mobile-social-media{
+  display: none; 
+  }
+/* main body */ 
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0 auto;
+  background: #fff;
+}
+main{
+  border-top: 3px solid #91AA9E; 
+  margin: 0 auto; 
+}
+.break{
+  height: 300px; 
+  width: 100%;
+  background: #fff; 
+  float: left; 
+}
+.first, .second, .catering, .about {
+  height: 600px;
+  width: 100%; 
+  max-width: 3000px; 
+  background-size: cover;
+  position: relative;
+  float: left; 
+  overflow: hidden; 
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(145, 170,158,1), rgba(145, 170,158,.4));
+  background: -webkit-linear-gradient(bottom, rgba(145, 170,158,1), rgba(145, 170,158,.4));
+  background: -moz-linear-gradient(bottom, rgba(145, 170,158,1), rgba(145, 170,158,.4));
+  font-size: 30px; 
+  padding: 20px;
+  width:100%; 
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 70px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+small {
+  opacity: 0;
+}
+.show-description p {
+  height: 150px;
+}
+.show-description small {
+  opacity: 1;
+}
+.first{
+  background-image: url("http://i.imgur.com/cESRmU4.jpg");
+}
+.second{
+  background-image: url("http://i.imgur.com/WhRtQW3.jpg");
+}
+.catering{
+  background-image: url("http://i.imgur.com/EKT79Pq.jpg");
+}
+.about{
+  background-image: url("http://i.imgur.com/lnddZRA.jpg"); 
+  }
+  
+/*whitespace break sections */ 
+.hours-address{
+  text-align: center; 
+  display: block; 
+  float: left; 
+  padding: 20px; 
+}
+.hours-address-logo{
+  float: right; 
+  padding: 30px; 
+  }
+.hours-address li{
+  list-style-type: none;
+  font-size: 30px;
+  }
+.break h1{
+  text-align: center; 
+  font-size: 50px; 
+}
+.break h2{
+  text-align: center;
+  padding: 10px;
+  line-height: 40px;
+  
+}
+.break h3{
+  font-size: 35px; 
+  }
+.body-social-media{
+  text-align: center; 
+}
+.body-social-media li{
+  list-style-type: none; 
+  display: inline; 
+  padding: 30px; 
+  font-size: 35px;
+  }
+
+/*Return to top button */ 
+#myBtn {
+  display: none; 
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(144,144,144, .8);
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 500px) {
+/*Resposnive hamburger menu*/  
+  .main-nav{
+      display: none; 
+    }
+  .mobile-nav{
+    display: initial;
+  }
+  .menu-btn{
+    padding: 20px 20px 0 20px; 
+  }
+  #menu-btn div {
+  	position: absolute;
+  	left: 100%;
+  	top: 64%;
+  	padding-right: 8px;
+  	margin-top: -0.50em;
+  	line-height: 1.5;
+  	font-weight: 300;
+  	vertical-align: middle;
+  	z-index: 99;
+  }
+  .menu-btn span {
+  	display: block;
+  	width: 22px;
+  	height: 5px;
+  	margin: 4px 0;
+  	background: #000;
+  	z-index: 99;
+  }
+  .responsive-menu{
+    max-height:0;
+    background: #91AA9E;
+    overflow:hidden;
+    transition:all .25s;
+  }
+  .expand {
+  	max-height:300px; 
+  }
+  .responsive-li{
+    list-style-type: none; 
+    padding: 5px 0; 
+    font-size: 25px; 
+    text-align: left; 
+    }
+  .responsive-li a{
+    text-decoration:none;
+    color: #fff;   
+  }
+  .responsive-li a:hover{
+    color: #000; 
+  }
+  /*Logo and name */ 
+  #logo{
+    height: 175px;
+  }
+  #name{
+    font-size: 40px;
+    margin-top: 20px;
+    line-height: 60px;
+  } 
+  /*Social media- header*/
+  .mobile-social-media{
+    display: initial; 
+    text-align: center;
+  }
+  .mobile-social-media li{
+    display: inline; 
+    padding:0 30px 0 0;  
+  }
+  .main-social-media{ 
+    display: none; 
+  }    
+  /* photos + text sections */ 
+  .about, .first, .second, .catering {
+    height: 290px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0; 
+    text-align: left;
+    padding: 5px;
+  
+  }
+  small {
+    font-size: 16px;
+    text-align: center; 
+  }
+  /* whitespace break sections */
+  .break h1{
+    font-size: 30px; 
+  }
+  .break h2{
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .break h3{
+    font-size: 20px; 
+    text-align: left;
+    padding-left: 10px; 
+  }
+  /* hours + address section */
+  .hours-address{
+    padding: 0; 
+  }
+  .hours-address-logo{
+    display: none;  
+    }
+  .hours-address li{
+    font-size: 20px;
+    text-align: left; 
+    padding: 0 30px 0 0; 
+  } 
+  /* connect with us section */
+  #connect{
+    margin-top: 80px;
+    }
+  .body-social-media li{ 
+    padding: 0 10px 0 0; 
+    }
+}
+@media only screen and (max-width: 800px){
+  .hours-address-logo{
+    display: none;  
+    } 
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="mobile-nav">
+    <div class="menu-btn" id="menu-btn">
+    	<div></div>
+    	<span></span>
+    	<span></span>
+    	<span></span>
+    </div>
+    <div class="responsive-menu">
+      <ul>
+        <li class="responsive-li"><a href="#"> FAQ </a></li>
+        <li class="responsive-li"><a href="#">Menus</a></li>
+        <li class="responsive-li"><a href="#">Reservations</a></li>
+        <li class="responsive-li"><a href="#">Careers</a></li>
+        <li class="responsive-li"><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-social-media">
+    <ul>
+      <li> <a href="#" class="headersm media fa fa-instagram"></a> </li>
+      <li> <a href="#" class="headersm fa fa-twitter"></a> </li>
+      <li> <a href="#" class="headersm fa fa-facebook"></a> </li>
+    </ul>
+  </div>
+  <img id="logo" src="http://i.imgur.com/8nNvTpB.png" alt="logo"> 
+  <h1 id="name"> Ape &amp; Butter</h1>
+</header>
+<nav class="main-nav">
+ <ul>
+    <li class="nav"><a href="#"> FAQ </a></li>
+    <li class="nav"><a href="#">Menus</a></li>
+    <li class="nav"><a href="#">Reservations</a></li>
+    <li class="nav"><a href="#">Careers</a></li>
+    <li class="nav"><a href="#">Contact Us</a></li>
+  </ul>
+</nav>
+<div class="mobile-social-media">
+<ul>
+    <li> <a href="#" class="headersm fa fa-facebook"></a> </li>
+    <li> <a href="#" class="headersm fa fa-twitter"></a> </li>
+     <li> <a href="#" class="headersm media fa fa-instagram"></a> </li>
+</ul>
+</div>
+
+<main> 
+<div class="about">
+  <p>About Us <i class="fa fa-angle-double-right" aria-hidden="true"></i><br />
+  <small>We keep it simple. We like to use fresh ingredients and we like to let the food do the talking. </small></p>
+</div>
+<div class="break">
+  <h1> Welcome! </h1> 
+  <h2> Opened in 2017, Ape &amp; Butter marries restaurant to local pub. Tallboys, muscadet, piles of chubby oysters and smart plates are served in a lively, approachable space in Downtown Seattle. </h2> 
+</div>
+<div class="first">
+  <p> Brunch Menu  <i class="fa fa-angle-double-right" aria-hidden="true"></i> <br />
+  <small>A treasury of favorite, simple and most-sought recipes centering on  brunches includes a variety of beverages, dishes and sides. </small></p>
+</div>
+<div class="break">
+  <div class="hours-address">
+  <h3> Hours </h3>
+  <ul> 
+    <li> CLOSED MON </li>
+    <li> T-F 12pm - 10pm </li>
+    <li> SA-SUN 10am - 10pm </li>
+  </ul>
+  </div>
+  <div class="hours-address">
+    <h3> Address </h3>
+      <ul>
+      <li> 123 Main St </li>
+      <li>Seattle, WA </li>
+      <li> <a href="#"> Get Directions </a> </li>
+  </div>
+  <div class="hours-address-logo">
+    <img src="http://i.imgur.com/8nNvTpB.png" alt="logo">
+  </div>
+</div>
+<div class="second">
+  <p> Lunch &amp; Dinner Menu <i class="fa fa-angle-double-right" aria-hidden="true"></i><br />
+  <small>We use only the finest, freshest ingredients, masterfully prepared in recipes designed to engage all of your senses.</small></p>
+</div>
+ <div class="break"> 
+  <h1 id="connect"> Connect with us!</h1>
+  <div class="body-social-media">
+    <ul>
+      <li> <a href="#" class="headersm fa fa-facebook"></a> </li>
+      <li> <a href="#" class="headersm fa fa-twitter"></a> </li>
+      <li> <a href="#" class="headersm media fa fa-instagram"></a> </li>
+    </ul>
+  </div>
+ </div> 
+<div class="catering">
+  <p>Catering <i class="fa fa-angle-double-right" aria-hidden="true"></i><br />
+  <small>Our catering and events team has developed a suite of excellent options for any sort of business meeting or company event you desire. </small></p>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+</main> 
+
+<script> 
+//paragraph toggle
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+
+//hamburger menu: http://www.internetkultur.at/simple-hamburger-drop-down-menu-with-css-and-jquery/
+	jQuery(function($){
+    	     $( '.menu-btn' ).click(function(){
+    	     $('.responsive-menu').toggleClass('expand')
+    	     })
+  })
+
+//show back to top button: http://jsfiddle.net/gilbitron/Lt2wH/
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+  }
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html> 
+
